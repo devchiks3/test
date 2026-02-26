@@ -1,0 +1,96 @@
+body{
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #ffeaa7, #fab1a0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    margin-top: 20px;
+    color: #2d3436;
+}
+
+.board{
+    width: 600px;
+    height: 600px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    border: 6px solid black;
+    position: relative;
+}
+
+/* Colorful Cells */
+.cell{
+    border: 1px solid #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* Alternate Colors */
+.cell:nth-child(odd){
+    background-color: #dff9fb;
+}
+
+.cell:nth-child(even){
+    background-color: #c7ecee;
+}
+
+/* 🐍 Animated Snake */
+.snake{
+    position: absolute;
+    top: 120px;
+    left: 250px;
+    animation: moveSnake 4s infinite alternate ease-in-out;
+}
+
+.snake-head{
+    width: 30px;
+    height: 30px;
+    background: #27ae60;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.snake-body{
+    width: 20px;
+    height: 200px;
+    background: linear-gradient(green, darkgreen);
+    margin-left: 5px;
+    border-radius: 20px;
+}
+
+/* Snake Animation */
+@keyframes moveSnake{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(50px);
+    }
+}
+
+/* 🪜 Real Ladder Design */
+.ladder{
+    position: absolute;
+    bottom: 80px;
+    right: 120px;
+    width: 40px;
+    height: 250px;
+    background: transparent;
+    border-left: 6px solid #8b4513;
+    border-right: 6px solid #8b4513;
+}
+
+/* Ladder Steps */
+.step{
+    width: 100%;
+    height: 8px;
+    background: #a0522d;
+    margin: 25px 0;
+}
