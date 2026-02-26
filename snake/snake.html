@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animated Snake and Ladder Board</title>
+    <link rel="stylesheet" href="snake.css">
+</head>
+<body>
+
+<h1 class="title">Snake & Ladder Board</h1>
+
+<div class="board">
+
+    <!-- 100 Boxes -->
+    <script>
+        for(let i = 100; i >= 1; i--){
+            document.write("<div class='cell'>" + i + "</div>");
+        }
+    </script>
+
+    <!-- Animated Snake -->
+    <div class="snake">
+        <div class="snake-head"></div>
+        <div class="snake-body"></div>
+    </div>
+
+    <!-- Real Ladder -->
+    <div class="ladder">
+        <div class="step"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+        <div class="step"></div>
+    </div>
+
+</div>
+
+</body>
+</html>
