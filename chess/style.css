@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 70px);
+    grid-template-rows: repeat(8, 70px);
+    border: 4px solid black;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+.white {
+    background: #fff;
+}
+
+.black {
+    background: #000;
+    color: white;
+}
+
